@@ -1,0 +1,30 @@
+// Global
+@import "./global/variables";
+@import "./global/mixins";
+@import "./global/functions/utilities";
+@import "./global/reset";
+@import "./global/utilities";
+
+// npm module
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import "~bootstrap/scss/bootstrap";
+@import "~vue-select/src/scss/vue-select.scss";
+@import '~vue2-datepicker/index.css';
+@import '~nprogress/nprogress.css';
+
+// Plugins
+@import "./plugins/swiper";
+@import "./plugins/parallax";
+
+// Components
+@import "./components/buttons";
+@import "./components/input";
+@import "./components/swiper-configs";
+@import "./components/vue-select-configs";
+@import "./components/tab-navigation";
+
+// Layouts
+@import "./layouts/header";
+
+// Pages
+@import "./pages/home";

@@ -1,0 +1,56 @@
+.inp-wrapper {
+    position: relative;
+    width: 20rem;
+    height: 3rem;
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #e1e5ee;
+        border-radius: 20px !important;
+        font-family: inherit;
+        font-size: inherit;
+        color: white;
+        outline: none;
+        padding: 1.25rem;
+        background: none;
+
+        &:hover {
+            border-color: #adffff;
+        }
+
+        /* Change border when input focus*/
+
+        &:focus {
+            border-color: #18ffff;
+        }
+    }
+
+    label {
+        position: absolute;
+        left: 1rem;
+        top: 8px;
+        padding: 0 3px;
+        color: white;
+        cursor: text;
+        transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+        background-color: #060b23;
+    }
+
+/*
+    1. When the input is in the focus state
+    reduce the size of the label and move upwards
+
+    2. Keep label state when content is in input field
+*/
+
+    .input:focus ~ .label,
+    .input:not(:placeholder-shown).input:not(:focus) ~ .label {
+        top: -0.5rem;
+        font-size: 0.8rem;
+        left: 0.8rem;
+    }
+}

@@ -1,0 +1,179 @@
+.reading-material-wrapper {
+    background-color: #1d322d;
+    height: 696.1px;
+    overflow: hidden;
+
+    @include desktop() {
+        height: 789px;
+    }
+
+    .parallax-wrapper {
+        .parallax-section {
+            position: relative;
+            height: 789px;
+
+            .img-wrapper-1 {
+                position: absolute;
+                top: 278px !important;
+                left: -42px !important;
+
+                @include desktop() {
+                    top: 207px !important;
+                    left: unset !important;
+                }
+
+                img {
+                    height: 194px;
+                    @include desktop() {
+                        width: 317px;
+                        height: unset;
+                    }
+                }
+            }
+
+            .img-wrapper-2 {
+                display: none;
+                @include desktop() {
+                    display: block;
+                    position: absolute;
+                    left: 407px !important;
+                    top: 324px !important;
+                }
+
+                img {
+                    width: 260px;
+                }
+            }
+
+            .img-wrapper-3 {
+                position: absolute;
+                left: unset !important;
+                right: 23px !important;
+                top: 29.1px !important;
+                @include desktop() {
+                    right: 260px !important;
+                    top: 84px !important;
+                }
+
+                img {
+                    height: 122px;
+                    @include desktop() {
+                        height: unset;
+                        width: 339px;
+                    }
+                }
+            }
+
+            .img-wrapper-4 {
+                position: absolute;
+                right: -58px !important;
+                top: 397.1px !important;
+                left: unset !important;
+                @include desktop() {
+                    right: 0 !important;
+                    top: 471px !important;
+                }
+
+                img {
+                    height: 130px;
+                    @include desktop() {
+                        height: unset;
+                        width: 376px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-title-wrapper {
+        height: 100%;
+        padding: 99px 0 0;
+        position: relative;
+        bottom: 800px;
+
+        @include desktop() {
+            padding: 0 62px 0 0;
+            bottom: 650px;
+            right: -28px;
+        }
+
+        .section-titles-container {
+            .content-container-1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .content-container-2 {
+                    padding: 0 88px;
+
+                    @include desktop() {
+                        padding: unset;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        &:first-child {
+                            font-family: "Teodor-Thin", sans-serif;
+                            font-size: 66px;
+                            line-height: normal;
+                            text-align: center;
+                            letter-spacing: normal;
+                            color: #fcfbec;
+                            margin-bottom: 25px;
+
+                            @include desktop() {
+                                margin-bottom: unset;
+                                font-size: 125px;
+                                letter-spacing: -3.75px;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            font-family: "ROM Regular", sans-serif;
+                            font-size: 62px;
+                            letter-spacing: -2.48px;
+                            line-height: normal;
+                            position: relative;
+                            bottom: 42px;
+                            color: #fcfbec;
+                            margin-bottom: 25px;
+
+                            @include desktop() {
+                                margin-bottom: unset;
+                                font-size: 120px;
+                                letter-spacing: -6px;
+                            }
+                        }
+                    }
+                }
+
+                .href-button {
+                    color: #FDFCEE;
+                    transition: background-color 0.5s ease;
+                    margin-bottom: 200px;
+                    @include desktop() {
+                        margin-bottom: 81px;
+                    }
+
+                    &:hover {
+                        background-color: #F3F1E5;
+                        color: #1D322D;
+                    }
+                }
+
+                span {
+                    color: $white;
+                    font-family: "ROM Regular", sans-serif;
+                    font-size: 14px;
+                    line-height: 22px;
+                    letter-spacing: normal;
+                    text-align: center;
+
+                    &.show-mob {
+                        padding: 0 24px;
+                    }
+                }
+            }
+        }
+    }
+}

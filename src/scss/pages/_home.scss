@@ -1,0 +1,28 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    & > div {
+        min-height: 500px;
+        width: 500px;
+        background-color: #007aff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            font-size: 16px;
+            justify-self: center;
+            color: white;
+            text-decoration: none;
+            height: fit-content;
+            border-bottom: 1px solid transparent;
+            @include desktop() {
+                font-size: 25px;
+            }
+        }
+    }
+}
