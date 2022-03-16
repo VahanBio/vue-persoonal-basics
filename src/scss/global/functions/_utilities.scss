@@ -101,7 +101,7 @@
 
 //display block;
 @each $brkpoint, $value in $media-break-points {
-    @if $brkpoint == 'all' {
+    @if $brkpoint == 'xs' {
 	.d-none {
 	    display: none !important;
 	}
