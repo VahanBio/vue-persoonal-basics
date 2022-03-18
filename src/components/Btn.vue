@@ -1,10 +1,12 @@
 <template>
-	<button :class="`btn-${design}`">{{name}}</button>
+	<button :class="`btn-${design}`">
+		<slot/>
+	</button>
 </template>
 
 <script>
 export default {
 	name: "CustomBtn",
-	props: ['name', 'design']
+	props: ['design']
 }
 </script>

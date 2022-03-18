@@ -4,7 +4,7 @@
 			asfj haoh asidfasid asogouig
 		</marquee-text>
 		<Input type="password" label="Password" id="pass"/>
-		<btn name="This" design="test" @click.native="working"/>
+		<Button design="test" @click.native="working">Hello</Button>
 		<v-lazy-image
 				srcset="../assets/images/logo.png"
 				alt="Fallback"
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Btn from "../components/Btn";
+import Button from "../components/Btn";
 import Input from "../components/Input";
 import MarqueeText from 'vue-marquee-text-component';
 
@@ -32,7 +32,7 @@ export default {
 		}
 	},
 	components: {
-		Btn,
+		Button,
 		Input,
 		MarqueeText
 	},
@@ -57,6 +57,7 @@ export default {
 	flex-direction: column-reverse;
 	font-size: 1.2rem;
 	background-color: #060b23;
+	overflow: hidden;
 
 	picture {
 		width: 200px;
