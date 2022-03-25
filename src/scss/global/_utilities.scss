@@ -1,28 +1,32 @@
+body {
+    overflow-x: hidden;
+}
+
 .show-mob {
     @include desktop() {
-	display: none;
+        display: none;
     }
 }
 
 .show-desk {
     display: none;
     @include desktop() {
-	display: block;
+        display: block;
     }
 }
 
 .hide-scroll {
     &::-webkit-scrollbar {
-	height: 0;
-	width: 0;
+        height: 0;
+        width: 0;
 
-	&-track {
-	    background-color: transparent;
-	}
+        &-track {
+            background-color: transparent;
+        }
 
-	&-thumb {
-	    background-color: transparent;
-	}
+        &-thumb {
+            background-color: transparent;
+        }
     }
 }
 
