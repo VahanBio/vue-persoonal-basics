@@ -1,0 +1,14 @@
+%hide-scroll {
+    &::-webkit-scrollbar {
+	height: 0;
+	width: 0;
+
+	&-track {
+	    background-color: transparent;
+	}
+
+	&-thumb {
+	    background-color: transparent;
+	}
+    }
+}

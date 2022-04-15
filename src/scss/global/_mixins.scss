@@ -1,6 +1,5 @@
 @import '../mixins/breakpoints';
 @import '../mixins/center';
-@import "../mixins/flex";
 @import "../mixins/placeholder";
 
 @function mat-color($palette, $hue: default, $opacity: null) {

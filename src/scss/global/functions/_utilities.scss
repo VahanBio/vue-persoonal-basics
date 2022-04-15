@@ -162,16 +162,16 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 		    .m#{str-slice($side, 0, 1)}-#{$id} {
 			margin-#{$side}: #{$space} !important;
 		    }
-		    // .p#{str-slice($side, 0, 1)}-#{$id} {
-		    //     padding-#{$side}: #{$space} !important;
-		    // }
+		    .p#{str-slice($side, 0, 1)}-#{$id} {
+			padding-#{$side}: #{$space} !important;
+		    }
 		} @else if ($side == 'bottom') {
 		    .m#{str-slice($side, 0, 1)}-#{$id} {
 			margin-#{$side}: #{$space} !important;
 		    }
-		    // .p#{str-slice($side, 0, 1)}-#{$id} {
-		    //     padding-#{$side}: #{$space} !important;
-		    // }
+		    .p#{str-slice($side, 0, 1)}-#{$id} {
+			padding-#{$side}: #{$space} !important;
+		    }
 		}
 	    } @else {
 		@include media-breakpoint-up(#{$brkpoint}) {
@@ -179,9 +179,9 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 			margin-#{$side}: #{$space} !important;
 		    }
 
-		    // .p#{str-slice($side, 0, 1)}-#{$brkpoint}-#{$id} {
-		    //     padding-#{$side}: #{$space} !important;
-		    // }
+		    .p#{str-slice($side, 0, 1)}-#{$brkpoint}-#{$id} {
+		        padding-#{$side}: #{$space} !important;
+		    }
 		}
 	    }
 	}

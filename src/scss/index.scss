@@ -4,24 +4,26 @@
 @import "./global/functions/utilities";
 @import "./global/reset";
 @import "./global/utilities";
+@import "./global/extends";
 
 // npm module
-@import '~@fortawesome/fontawesome-free/css/all.css';
+@import "~@fortawesome/fontawesome-free/css/all.css";
 @import "~bootstrap/scss/bootstrap";
 @import "~vue-select/src/scss/vue-select.scss";
-@import '~vue2-datepicker/index.css';
-@import '~nprogress/nprogress.css';
-
-// Plugins
-@import "./plugins/swiper";
-@import "./plugins/parallax";
+@import "~vue2-datepicker/index.css";
+@import "~nprogress/nprogress.css";
 
 // Components
+@import "./components/accordion";
 @import "./components/buttons";
 @import "./components/input";
-@import "./components/swiper-configs";
-@import "./components/vue-select-configs";
-@import "./components/tab-navigation";
+@import "./components/swiper";
+
+// Configs
+@import "./configs/parallax";
+@import "./configs/swiper-configs";
+@import "./configs/tab-navigation";
+@import "./configs/vue-select-configs";
 
 // Layouts
 @import "./layouts/header";

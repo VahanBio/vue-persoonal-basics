@@ -4,7 +4,9 @@
 			asfj haoh asidfasid asogouig
 		</marquee-text>
 		<Input type="password" label="Password" id="pass"/>
-		<Button design="test" @click.native="working">Hello</Button>
+		<Accordion title="test">Hello</Accordion>
+		<Accordion title="world">World</Accordion>
+		<Button design="test" :click="working" :disabled="false">Hello</Button>
 		<v-lazy-image
 				srcset="../assets/images/logo.png"
 				alt="Fallback"
@@ -21,20 +23,22 @@
 </template>
 
 <script>
-import Button from "../components/Btn";
-import Input from "../components/Input";
+import Button from "../components/UI/Button";
+import Input from "../components/UI/Input";
 import MarqueeText from 'vue-marquee-text-component';
+import Accordion from "../components/UI/Accordion";
 
 export default {
 	data() {
 		return {
-			stop: false
+			stop: false,
 		}
 	},
 	components: {
 		Button,
 		Input,
-		MarqueeText
+		MarqueeText,
+		Accordion
 	},
 	methods: {
 		stopAnim() {
