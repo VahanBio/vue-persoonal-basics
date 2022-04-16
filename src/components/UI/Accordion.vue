@@ -2,9 +2,8 @@
 	<div :class="`accordion ${active ? 'accordion--open' : ''}`">
 		<div class="accordion--head" @click="toggleAccordions">
 			<h5 class="accordion--title">{{ title }}</h5>
-			<button class="accordion--trigger">
-				<img :src='icon' class="accordion--icon" alt="accordion-icon">
-			</button>
+			<img v-if="imgIcon" :src='icon' class="accordion--icon" alt="accordion-icon">
+			<i v-else class="fas fa-chevron-down"></i>
 		</div>
 		<transition name="accordion">
 			<div :class="`accordion--body ${bodyClass ? bodyClass : ''}`" v-if="active">
@@ -16,10 +15,12 @@
 
 <script>
 export default {
-	props: ['title', 'icon', 'bodyClass'],
+	name: 'Accordion',
+	props: ['title', 'icon', 'bodyClass', 'imgIcon'],
 	data() {
 		return {
 			active: false,
+			imgIcon: true
 		}
 	},
 	methods: {
