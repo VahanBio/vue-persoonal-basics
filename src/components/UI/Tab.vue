@@ -1,25 +1,34 @@
 <template>
 	<section>
 		<div class="tab--buttons">
-			<button
+			<a  href="#"
 					v-for="(tab, key) in tabs"
 					:key="'tab-' + key"
-					@click="setActive(tab.type)"
+					@click.prevent="setActive(tab.type)"
 					:class="`tab--title ${active.type === tab.type ? 'active' : ''}`"
 			>{{ tab.name }}
-			</button>
+			</a>
 		</div>
 		<div
-				v-for="(tab, key) in tabs"
-				:key="'tab--content-' + key"
-				class="tab--content"
-				v-if="active.type === tab.type"
+			v-for="(tab, key) in tabs"
+			:key="'tab--content-' + key"
+			class="tab--content"
+			v-if="active.type === tab.type"
 		>
 			<Accordion v-for="(item, index) in tab.questions" :key="'faq-' + tab.type + '-question-' + index"
 					   :title="item.question">
 				{{ item.answer }}
 			</Accordion>
-
+<!--			<Accordion v-for="(item, index) in tab.questions" :key="'faq-' + tab.type + '-question-' + index"-->
+<!--					   :body-class="`works`"-->
+<!--					   :img-icon="true">-->
+<!--				<template v-slot:accordion-title>-->
+<!--					{{item.question}}-->
+<!--				</template>-->
+<!--				<template v-slot:accordion&#45;&#45;body>-->
+<!--					{{ item.answer }}-->
+<!--				</template>-->
+<!--			</Accordion>-->
 		</div>
 	</section>
 </template>
@@ -77,6 +86,7 @@ export default {
 				type: type,
 				opened: false
 			};
+			window.history.pushState(null, null, `#${type}`)
 		}
 	}
 }

@@ -2,31 +2,53 @@
 	<div :class="`accordion ${active ? 'accordion--open' : ''}`">
 		<div class="accordion--head" @click="toggleAccordions">
 			<h5 class="accordion--title">{{ title }}</h5>
-			<img v-if="imgIcon" :src='icon' class="accordion--icon" alt="accordion-icon">
-			<i v-else class="fas fa-chevron-down"></i>
+			<i class="fas fa-chevron-down"></i>
 		</div>
 		<transition name="accordion">
-			<div :class="`accordion--body ${bodyClass ? bodyClass : ''}`" v-if="active">
+			<div
+					:class="`accordion--body ${bodyClass ? bodyClass : ''}`"
+					v-if="active"
+			>
 				<slot/>
 			</div>
 		</transition>
+<!--		<div class="accordion&#45;&#45;head" @click="toggleAccordions">-->
+<!--			<h5 class="accordion&#45;&#45;title">-->
+<!--				<slot name="accordion-title"></slot>-->
+<!--			</h5>-->
+<!--			<img-->
+<!--					v-if="imgIcon"-->
+<!--					:src="icon"-->
+<!--					class="accordion&#45;&#45;icon"-->
+<!--					alt="accordion-icon"-->
+<!--			/>-->
+<!--			<i v-else class="fas fa-chevron-down"></i>-->
+<!--		</div>-->
+<!--		<transition name="accordion">-->
+<!--			<div-->
+<!--					:class="`accordion&#45;&#45;body ${bodyClass ? bodyClass : ''}`"-->
+<!--					v-if="active"-->
+<!--			>-->
+<!--				<slot name="accordion-body"></slot>-->
+<!--			</div>-->
+<!--		</transition>-->
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'Accordion',
-	props: ['title', 'icon', 'bodyClass', 'imgIcon'],
+	name: "Accordion",
+	props: ["title", "icon", "bodyClass"],
 	data() {
 		return {
 			active: false,
-			imgIcon: true
-		}
+			imgIcon: true,
+		};
 	},
 	methods: {
 		toggleAccordions() {
-			this.active = !this.active
-		}
-	}
-}
+			this.active = !this.active;
+		},
+	},
+};
 </script>
