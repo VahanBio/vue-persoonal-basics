@@ -10,19 +10,33 @@
                 {{ tab.name }}
             </a>
         </div>
-        <div
-            v-for="(tab, key) in tabBody"
-            :key="'tab--content-' + key"
-            class="tab--content"
-            v-if="active.type === tab.type && $mq === 'lg'"
-        >
-            <slot/>
+        <div class="tab--content">
+            <Accordion v-for="(item, index) in questions" :key="index"
+                       :title="item.question">
+                {{ item.answer }}
+            </Accordion>
         </div>
+<!--        <div-->
+<!--            v-for="(tab, key) in tabHead"-->
+<!--            :key="'tab&#45;&#45;content-' + key"-->
+<!--            class="tab&#45;&#45;content"-->
+<!--            v-if="active.type === tab.type && $mq === 'lg'"-->
+<!--        >-->
+<!--            <Accordion v-for="(item, index) in tab.questions" :key="'faq-' + item.type + '-question-' + index"-->
+<!--                       :title="item.question">-->
+<!--                {{ item.answer }}-->
+<!--            </Accordion>-->
+<!--        </div>-->
     </section>
 </template>
 
 <script>
+import Accordion from "@/components/UI/Accordion";
+
 export default {
+    components: {
+        Accordion,
+    },
     props: [
         'tabHead',
         'tabBody',
@@ -35,6 +49,15 @@ export default {
                 opened: false
             }
         }
+    },
+    computed: {
+        questions () {
+            let questions = []
+            if (this.active.type) {
+                questions = this.tabHead.find(({type}) => type === this.active.type).questions
+            }
+            return questions
+        },
     },
     methods: {
         setActive(type) {
