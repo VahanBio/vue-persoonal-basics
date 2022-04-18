@@ -3,7 +3,7 @@ import Swiper from "../views/Swiper";
 import SwiperVue from "../views/SwiperVue";
 import Parallax from "../views/Parallax";
 import Select from "../components/VueSelectDate";
-import TabNavigation from "../components/UI/Tab";
+import TabNavigation from "../components/Tabs";
 import LazyLoad from "../views/LazyLoad";
 
 const routes = [
