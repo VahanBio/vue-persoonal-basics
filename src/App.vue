@@ -21,7 +21,7 @@ export default {
 		'$route': {
 			handler: (to, from) => {
 				document.title = to.meta.title || 'Test'
-				this.$store.commit('setPopups', false)
+				// this.$store.commit('setPopups', false)
 			},
 			immediate: true,
 		}

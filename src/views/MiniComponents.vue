@@ -3,20 +3,11 @@
 		<marquee-text :repeat="500" :duration="3" :paused="stop" @mouseover="stopAnim" @mouseleave="stopAnim">
 			asfj haoh asidfasid asogouig
 		</marquee-text>
-		<Input type="password" label="Password" id="pass"/>
-		<Accordion title="test">Hello</Accordion>
-		<Accordion title="world">World</Accordion>
+		<Input type="password" label="Password" id="pass" :in-viewport-once='true'/>
 		<Button design="test" :click="working" :disabled="false">Hello</Button>
-		<v-lazy-image
-				srcset="../assets/images/logo.png"
-				alt="Fallback"
-				use-picture
-		>
-			<source srcset="../assets/images/logo.png"/>
-		</v-lazy-image>
 		<vue-load-image>
 			<img slot="image"
-				 src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg">
+				 src="https://github.com/gcw07.png">
 			<img slot="preloader" src="../assets/images/preload.gif"/>
 		</vue-load-image>
 	</div>
@@ -26,7 +17,6 @@
 import Button from "../components/UI/Button";
 import Input from "../components/UI/Input";
 import MarqueeText from 'vue-marquee-text-component';
-import Accordion from "../components/UI/Accordion";
 
 export default {
 	data() {
@@ -37,8 +27,7 @@ export default {
 	components: {
 		Button,
 		Input,
-		MarqueeText,
-		Accordion
+		MarqueeText
 	},
 	methods: {
 		stopAnim() {

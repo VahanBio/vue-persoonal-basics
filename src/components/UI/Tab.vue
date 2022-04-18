@@ -13,15 +13,14 @@
 			v-for="(tab, key) in tabs"
 			:key="'tab--content-' + key"
 			class="tab--content"
-			v-if="active.type === tab.type"
+			v-if="active.type === tab.type && $mq === 'lg'"
 		>
 			<Accordion v-for="(item, index) in tab.questions" :key="'faq-' + tab.type + '-question-' + index"
 					   :title="item.question">
 				{{ item.answer }}
 			</Accordion>
 <!--			<Accordion v-for="(item, index) in tab.questions" :key="'faq-' + tab.type + '-question-' + index"-->
-<!--					   :body-class="`works`"-->
-<!--					   :img-icon="true">-->
+<!--					   :body-class="`works`">-->
 <!--				<template v-slot:accordion-title>-->
 <!--					{{item.question}}-->
 <!--				</template>-->

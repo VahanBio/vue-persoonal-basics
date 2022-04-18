@@ -5,10 +5,7 @@
 			<i class="fas fa-chevron-down"></i>
 		</div>
 		<transition name="accordion">
-			<div
-					:class="`accordion--body ${bodyClass ? bodyClass : ''}`"
-					v-if="active"
-			>
+			<div :class="`accordion--body ${bodyClass ? bodyClass : ''}`" v-if="active">
 				<slot/>
 			</div>
 		</transition>
@@ -16,13 +13,7 @@
 <!--			<h5 class="accordion&#45;&#45;title">-->
 <!--				<slot name="accordion-title"></slot>-->
 <!--			</h5>-->
-<!--			<img-->
-<!--					v-if="imgIcon"-->
-<!--					:src="icon"-->
-<!--					class="accordion&#45;&#45;icon"-->
-<!--					alt="accordion-icon"-->
-<!--			/>-->
-<!--			<i v-else class="fas fa-chevron-down"></i>-->
+<!--			<i class="fas fa-chevron-down"></i>-->
 <!--		</div>-->
 <!--		<transition name="accordion">-->
 <!--			<div-->
@@ -42,7 +33,6 @@ export default {
 	data() {
 		return {
 			active: false,
-			imgIcon: true,
 		};
 	},
 	methods: {
