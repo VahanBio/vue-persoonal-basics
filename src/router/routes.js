@@ -1,10 +1,13 @@
-import Home from "../views/Home";
-import Swiper from "../views/Swiper";
-import SwiperVue from "../views/SwiperVue";
-import Parallax from "../views/Parallax";
-import Select from "../components/VueSelectDate";
-import TabNavigation from "../components/Test";
-import LazyLoad from "../views/LazyLoad";
+//Routes
+const
+    Home = () => import("../views/Home"),
+    Swiper = () => import("../views/Swiper"),
+    SwiperVue = () => import("../views/SwiperVue"),
+    Parallax = () => import("../views/Parallax"),
+    Select = () => import("../components/VueSelectDate"),
+    TabNavigation = () => import("../components/Test"),
+    LazyLoad = () => import("../views/LazyLoad"),
+    MiniComponents = () => import('../views/MiniComponents')
 
 const routes = [
     {
@@ -46,7 +49,7 @@ const routes = [
     {
         path: '/mini-components',
         name: 'Components',
-        component: () => import('../views/MiniComponents'),
+        component: MiniComponents,
         meta: {title: 'Mini Components'}
     },
     {

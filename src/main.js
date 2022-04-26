@@ -1,14 +1,21 @@
+window._ = require('lodash');
+window.axios = require('axios');
+
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import 'bootstrap'
+import './scss/index.scss'
 import store from './store'
-import VueLoadImage from 'vue-load-image';
-import VueMq from 'vue-mq';
-import 'bootstrap';
-import './scss/index.scss';
+import VueMq from 'vue-mq'
+import VueLoadImage from 'vue-load-image'
+import VueProgressBar from 'vue-progressbar'
+import moment from 'moment';
+import ElementUI from 'element-ui';
 
+Vue.use(ElementUI);
 Vue.use(VueMq, {
-    breakpoints:{
+    breakpoints: {
         xs: 0,
         sm: 576,
         md: 992,
@@ -16,9 +23,17 @@ Vue.use(VueMq, {
     }
 })
 
+const options = {
+    color: '#2980ff',
+    failedColor: '#ce3c20'
+}
+
 Vue.component('vue-load-image', VueLoadImage);
+Vue.use(VueProgressBar, options)
 
 Vue.config.productionTip = false;
+Vue.prototype.moment = moment
+window.moment = moment
 
 new Vue({
     router,
