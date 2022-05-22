@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="swiper">
+    <div class="swiper" ref="slider">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
@@ -14,8 +14,8 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
-    <div class="swiper-scrollbar"></div>
-    <div class="swiper-custom-scrollbar"></div>
+    <div class="swiper-scrollbar" ref="sliderScrollbar"></div>
+    <div class="swiper-custom-scrollbar" ref="sliderPagination"></div>
   </div>
 
 </template>
@@ -45,7 +45,7 @@ export default {
     }
   },
   mounted() {
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper(this.$refs.slider, {
       // Optional parameters
       slidePerView: 3,
       spaceBetween: 10,
@@ -60,12 +60,12 @@ export default {
         disableOnInteraction: false
       },
       scrollbar: {
-        el: '.swiper-scrollbar',
+        el: this.$refs.sliderScrollbar,
         hide: false,
         draggable: true,
       },
       pagination: {
-        el: '.swiper-custom-scrollbar',
+        el: this.$refs.sliderPagination,
         type: 'progressbar'
       },
       navigation: {

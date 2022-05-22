@@ -1,6 +1,6 @@
-@import '../mixins/breakpoints';
-@import '../mixins/center';
-@import '../mixins/placeholder';
+@import './mixins/breakpoints';
+@import './mixins/center';
+@import './mixins/placeholder';
 
 @function mat-color($palette, $hue: default, $opacity: null) {
     // If hueKey is a number between zero and one, then it actually contains an

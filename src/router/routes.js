@@ -1,13 +1,13 @@
 //Routes
 const
-    Home = () => import("../views/Home"),
-    Swiper = () => import("../views/Swiper"),
-    SwiperVue = () => import("../views/SwiperVue"),
-    Parallax = () => import("../views/Parallax"),
+    Home = () => import("../pages/Home"),
+    Swiper = () => import("../pages/Swiper"),
+    SwiperVue = () => import("../pages/SwiperVue"),
+    Parallax = () => import("../pages/Parallax"),
     Select = () => import("../components/VueSelectDate"),
     TabNavigation = () => import("../components/Test"),
-    LazyLoad = () => import("../views/LazyLoad"),
-    MiniComponents = () => import('../views/MiniComponents')
+    LazyLoad = () => import("../pages/LazyLoad"),
+    MiniComponents = () => import('../pages/MiniComponents')
 
 const routes = [
     {
