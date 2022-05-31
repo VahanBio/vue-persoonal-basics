@@ -31,6 +31,7 @@
 </template>
 
 <script>
+//"swiper": "^5.4.5" and "vue-awesome-swiper": "^4.1.1" required to work
 import {Swiper, SwiperSlide, directive} from 'vue-awesome-swiper'
 
 export default {

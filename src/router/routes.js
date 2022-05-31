@@ -2,7 +2,6 @@
 const
     Home = () => import("../pages/Home"),
     Swiper = () => import("../pages/Swiper"),
-    SwiperVue = () => import("../pages/SwiperVue"),
     Parallax = () => import("../pages/Parallax"),
     Select = () => import("../components/VueSelectDate"),
     TabNavigation = () => import("../components/Test"),
@@ -21,12 +20,6 @@ const routes = [
         name: 'Swiper',
         component: Swiper,
         meta: {title: 'Swiper'}
-    },
-    {
-        path: '/swiper-vue',
-        name: 'SwiperVue',
-        component: SwiperVue,
-        meta: {title: 'Swiper Vue'}
     },
     {
         path: '/parallax',
