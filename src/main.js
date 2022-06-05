@@ -12,6 +12,9 @@ import VueLoadImage from 'vue-load-image'
 import VueProgressBar from 'vue-progressbar'
 import moment from 'moment';
 import ElementUI from 'element-ui';
+import Particles from "particles.vue";
+
+Vue.use(Particles);
 
 Vue.use(ElementUI);
 Vue.use(VueMq, {

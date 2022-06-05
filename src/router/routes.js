@@ -6,7 +6,8 @@ const
     Select = () => import("../components/VueSelectDate"),
     TabNavigation = () => import("../components/Test"),
     LazyLoad = () => import("../pages/LazyLoad"),
-    MiniComponents = () => import('../pages/MiniComponents')
+    MiniComponents = () => import('../pages/MiniComponents'),
+    Particles = () => import('../pages/ParticleJS')
 
 const routes = [
     {
@@ -50,6 +51,12 @@ const routes = [
         name: 'Lazy Load',
         component: LazyLoad,
         meta: {title: 'Lazy Load'}
+    },
+    {
+        path: '/particles',
+        name: 'Particles',
+        component: Particles,
+        meta: {title: 'Particle JS'}
     },
 ]
 
