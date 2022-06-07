@@ -10,6 +10,11 @@
 				 src="https://github.com/gcw07.png">
 			<img slot="preloader" src="../assets/images/preload.gif"/>
 		</vue-load-image>
+		<LazyImage
+				class="loading-img"
+				src="https://github.com/gcw07.png"
+				mobile-src="github.io/gcw07.png"
+		/>
 	</div>
 </template>
 
@@ -17,6 +22,7 @@
 import Button from "../components/UI/Button";
 import Input from "../components/UI/Input";
 import MarqueeText from 'vue-marquee-text-component';
+import LazyImage from "@/components/UI/LazyImage";
 
 export default {
 	data() {
@@ -27,7 +33,8 @@ export default {
 	components: {
 		Button,
 		Input,
-		MarqueeText
+		MarqueeText,
+		LazyImage
 	},
 	methods: {
 		stopAnim() {
@@ -43,7 +50,6 @@ export default {
 <style lang="scss">
 .form-wrapper {
 	width: 100%;
-	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
