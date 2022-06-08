@@ -5,16 +5,19 @@
 		</marquee-text>
 		<Input type="password" label="Password" id="pass" :in-viewport-once='true'/>
 		<Button design="test" :click="working" :disabled="false">Hello</Button>
-		<vue-load-image>
-			<img slot="image"
-				 src="https://github.com/gcw07.png">
-			<img slot="preloader" src="../assets/images/preload.gif"/>
-		</vue-load-image>
+		<mq-layout mq="md+">
+			<vue-load-image>
+				<img slot="image"
+					 src="https://github.com/gcw07.png">
+				<img slot="preloader" src="../assets/images/preload.gif"/>
+			</vue-load-image>
+		</mq-layout>
+		<mq-layout mq="sm">
 		<LazyImage
 				class="loading-img"
 				src="https://github.com/gcw07.png"
-				mobile-src="github.io/gcw07.png"
 		/>
+		</mq-layout>
 	</div>
 </template>
 
@@ -23,6 +26,7 @@ import Button from "../components/UI/Button";
 import Input from "../components/UI/Input";
 import MarqueeText from 'vue-marquee-text-component';
 import LazyImage from "@/components/UI/LazyImage";
+
 
 export default {
 	data() {

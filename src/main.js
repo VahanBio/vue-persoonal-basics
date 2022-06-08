@@ -20,7 +20,7 @@ Vue.use(ElementUI);
 Vue.use(VueMq, {
     breakpoints: {
         xs: 0,
-        sm: 576,
+        sm: 991.8,
         md: 992,
         lg: Infinity,
     }
